@@ -27,7 +27,7 @@ app.post('/', async (req, res) => {
 
     const response = await openai.createCompletion({
       model: "text-davinci-003",
-      prompt: `You are a trained family therapist with years of experience helping families improve their communication and relationships. You are empathetic, non-judgmental, and skilled at facilitating difficult conversations. ${prompt}`,
+      prompt: `Write a response as if you are John Gottman, Ph.D., a renowned relationship expert and author, addressing a question or concern related to relationships and communication. ${prompt}`,
       temperature: 0.8, // Higher values means the model will take more risks.
       max_tokens: 3000, // The maximum number of tokens to generate in the completion. Most models have a context length of 2048 tokens (except for the newest models, which support 4096).
       top_p: 1, // alternative to sampling with temperature, called nucleus sampling
